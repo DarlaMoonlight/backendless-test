@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+:root {
+	--main-color: #363237;
+	--main-hover-color: #291b0a;
+	--main-bg-color: #ecdab9;
+	--dark-bg-color:  #d09683;
+}
+body.blue-theme{
+	--main-color: #c4dfe6;
+	--main-bg-color: #66a5ad;
+	--dark-bg-color:  #003b46;
+}
+body.green-theme{
+	--main-color: #c9d1c8;
+	--main-bg-color: #5b7065;
+	--dark-bg-color:  #04202c;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	font-family: 'Redressed', cursive;
+}
+.wrapper{
+	padding: 0 15px;
+}
+.header{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	width: 100%;
+	background-color: var(--dark-bg-color);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.logo{
+	color: var(--main-color);
+	text-decoration: none;
+	font-size: 32px;
+	line-height: 1.2em;
+}
+.change-themes{
+	color: var(--main-color);
+	list-style-type: none;
+	display: inline-flex;
+}
+.change-themes li *{
+	cursor: pointer;
+}
+.visible_desktop{
+	padding: 0 10px;
+}
+.visible_tablet, .visible_mobile{
+	display: none;
+}
+
+@media (hover: hover) { 
+	.change-themes li *:hover{
+		color:  var(--main-hover-color);
+	}
+}
